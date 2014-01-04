@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 위에 있는 룰이 우선순위 높음
+RewriteRule ^([0-9]+)/$ ./index.php?id=$1 [L]
+#RewriteRule ^(create|createform)/$ ./index.php?mode=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/$ ./index.php?pid=$1 [L]
+#RewriteRule ^([0-9]+)/(update|updateform|delete)/$ ./index.php?id=$1&mode=$2 [L]
+#RewriteRule ^([[a-zA-Z0-9_-]+)/(update|updateform|delete)/$ ./index.php?pid=$1&mode=$2 [L]
